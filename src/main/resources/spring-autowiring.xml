@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd" 
+        default-autowire="constructor">
+        
+        <!-- 
+        default-autowire主动装配的方式：
+   		- default
+		- no
+		- byName
+		- byType
+		- constructor
+        -->
+        
+        
+        <bean id="autoWiringService" class="com.imooc.autowiring.AutoWiringService" ></bean>
+        
+        <!-- 以下两种方法都可以实现bean的自动装配 -->
+        
+        <!-- 根据Name自动装配Bean -->
+        <bean id="autoWiringDAO" class="com.imooc.autowiring.AutoWiringDAO" ></bean>
+       
+        <!-- 根据构造器或类型自动装配Bean -->
+         <bean class="com.imooc.autowiring.AutoWiringDAO" ></bean>
+	
+ </beans>
